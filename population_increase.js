@@ -12,14 +12,13 @@ while (a < parseInt(lines[0])) {
   var h3 = parseFloat(c[2]);
   var h4 = parseFloat(c[3]);
   while (h1 <= h2 && d <= 100) {
-    h1 += Math.round(((h1 * h3) / 100));
-    h2 += Math.round(((h2 * h4) / 100));
+    h1 += Math.trunc(((h1 * h3) / 100));
+    h2 += Math.trunc(((h2 * h4) / 100));
     d += 1;
   }
-  if (d <= 100) { console.log(d,  "anos.\n") }
-  else { console.log("Mais de 1 seculo.\n") }
+  if (d <= 100) { console.log(d+ " anos.") }
+  else { console.log("Mais de 1 seculo.") }
   a++;
   b++;
   d = 0;
 }
-
